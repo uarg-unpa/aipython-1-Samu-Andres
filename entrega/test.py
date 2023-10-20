@@ -10,5 +10,5 @@ print()
 print("La funcion \"print\" ...")
 # "\\"
 print('La funcion "print" ...')
-# '' 
+# ''
 #""
