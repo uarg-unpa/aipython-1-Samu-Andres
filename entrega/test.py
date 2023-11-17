@@ -14,8 +14,8 @@
 #""
 
 
-palabra = input("Ingresa una palabra: ")
+#palabra = input("Ingresa una palabra: ")
 
-palabra_modificada = palabra.replace("a", "😃")
+#palabra_modificada = palabra.replace("a", "😃")
 
-print("Palabra con 'a' reemplazada por 😃:", palabra_modificada)
+#print("Palabra con 'a' reemplazada por 😃:", palabra_modificada)
