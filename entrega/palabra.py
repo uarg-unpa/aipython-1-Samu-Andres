@@ -22,12 +22,21 @@ def buscarSimbolo(palabra,simbolo):
             return  True
     return False
 
+def invertirPalabra(palabra):
+    invertida=""
+    for i in range(len(palabra)-1,-1,-1):
+        invertida+=palabra[i]
+    return invertida
+
+
 def main():
     while True:
         palabra = input("Ingrese una palabra: ")
         print("1: Mostrar Caracteres ")
         print("2: Contar Vocales")
         print("3: Contar Consonantes")
+        print("4: Buscar Simbolo")
+        print("5: Invertir Palabra")
         op=int(input("Ingrese una opcion: "))
         if op==1:
             mostrarCarac(palabra)
@@ -35,6 +44,15 @@ def main():
             print(f"Cantidad de vocales en {palabra} es {contarVocales(palabra)}")
         elif op==3:
             print(f"Cantidad de consonantes en {palabra} es {contarCons(palabra)}")
+        elif op==4:
+            simbolo=input("Ingrese para buscar: ")
+            if buscarSimbolo(palabra,simbolo):
+                print(f"El simbolo {simbolo} se encuentra en {palabra}")
+            else:
+                print(f"El simbolo {simbolo} no se encuentra en {palabra}")
+        elif op==5:
+            inveritda=invertirPalabra(palabra)
+            print(inveritda)
         else:
             print("Parece no haber ingresado una opcion disponible")
         cont=input("Desea continuar? S/N: ")
@@ -42,6 +60,6 @@ def main():
             continue
         else:
             break
-print("Finalizado")
+    print("Finalizado")
 
 main()
