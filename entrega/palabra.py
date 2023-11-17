@@ -16,6 +16,12 @@ def contarCons(palabra):
             cant+=1
     return cant
 
+def buscarSimbolo(palabra,simbolo):
+    for i in range(len(palabra)):
+        if palabra[i]==simbolo:
+            return  True
+    return False
+
 def main():
     while True:
         palabra = input("Ingrese una palabra: ")
@@ -28,7 +34,7 @@ def main():
         elif op==2:
             print(f"Cantidad de vocales en {palabra} es {contarVocales(palabra)}")
         elif op==3:
-            print("Cantidad de consonantes en {palabra} es {contarCons(palabra)}")
+            print(f"Cantidad de consonantes en {palabra} es {contarCons(palabra)}")
         else:
             print("Parece no haber ingresado una opcion disponible")
         cont=input("Desea continuar? S/N: ")
@@ -36,4 +42,6 @@ def main():
             continue
         else:
             break
-print("Fin del programa")
+print("Finalizado")
+
+main()
